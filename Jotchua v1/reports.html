@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="javascript/reportcode.js"></script>
+<script src="javascript/reportSHdata.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 style="font-size: 25px; margin-left:17px;"> Create report files</h1>
+    <div class="container" >
+        <a href="scripts.html"><button style="margin:2px" class="btn btn-primary btn-sm"> Git commands</button></a>
+        <a href="index.html"><button style="margin:2px" class="btn btn-primary btn-sm"> Go to home</button></a>     
+</div>
+<form>
+    <div class="form-group" style="margin:2px">
+      <input type="text" class="form-control " id="reportAuthor" placeholder="Author">
+    </div>
+    <div class="form-group" style="margin:2px">
+        <input type="text" class="form-control" id="reportDate" value="">
+      </div>
+     
+  
+        <div class="form-check form-check-inline" style="margin-left:8px">
+          <input class="form-check-input" type="radio" name="radioSystem" id="radioSALOG" value="SALOG" checked>
+          <label class="form-check-label" for="radioSALOG">
+            SALOG
+          </label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-left:8px">
+          <input class="form-check-input" type="radio" name="radioSystem" id="radioBPA" value="BPA">
+          <label class="form-check-label" for="radioBPA">
+            BPA
+          </label>
+        </div>
+        
+     
+    <div class="form-group" style="margin:2px">
+        <input type="text" class="form-control" id="ticketNumberReport" placeholder="RT number (1234567890)" >
+    </div>
+    <div class="form-group" style="margin:2px">
+        <input type="text" class="form-control" id="reportName" placeholder="Report Name">
+    </div>
+    <div class="form-group" style="margin:2px">
+        <input type="text" class="form-control" id="reportDescription" placeholder="Report description">
+    </div>
+    <div class="form-group" style="margin:2px">
+      <input type="text" class="form-control" id="reportZone" value="AMER" disabled>
+  </div>
+    <div class="form-group" style="margin:2px">
+        <input type="text" class="form-control" id="reportBranch" placeholder="BRKN, USKN ...." minlength="4" maxlength="4">
+    </div>
+    <div class="form-group" style="margin:2px">
+        <textarea class="form-control" id="emailsTextareaReport" rows="1" placeholder="user.name1,use.name2,user.name3"></textarea>
+    </div>
+ 
+
+    <div class="form-check form-check-inline" style="margin-left:8px">
+      <input class="form-check-input" type="radio" name="radioDb" id="radioSR" value="executesqlwbquerySalogRead.sh" checked>
+      <label class="form-check-label" for="radioSR">
+        SALOG-R
+      </label>
+    </div>
+    <div class="form-check form-check-inline" style="margin-left:8px">
+      <input class="form-check-input" type="radio" name="radioDb" id="radioD1" value="executesqlwbquerySalogDump1.sh" >
+      <label class="form-check-label" for="radioD1">
+        Dump1
+      </label>
+    </div>
+    <div class="form-check form-check-inline" style="margin-left:8px">
+      <input class="form-check-input" type="radio" name="radioDb" id="radioD2" value="executesqlwbquerySalogDump2.sh" >
+      <label class="form-check-label" for="radioD2">
+        Dump2
+      </label>
+    </div>
+    <div class="form-check form-check-inline" style="margin-left:8px">
+      <input class="form-check-input" type="radio" name="radioDb" id="radioD3" value="executesqlwbquerySalogDump3.sh" >
+      <label class="form-check-label" for="radioD3">
+        Dump3
+      </label>
+    </div>
+
+    <div class="form-group" style="margin:2px">
+        <textarea class="form-control" id="SQLtextareaReport" rows="4" placeholder="SQL code here"></textarea>
+      </div>
+  </form>
+    <div class="container" >
+    <button id="btnGenerateReportFiles" style="margin:2px"  class="btn btn-primary btn-success btn-sm" >Generate Report Files</button>
+    <button id="btnClearData" style="margin:2px"  class="btn btn-primary btn-danger btn-sm" >Clear data</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+"manifest_version": 3,
+"name": "GSD 1 Jotchua assistant",
+"version": "1.0",
+"description": "GSD 1 support tool",
+"icons":{
+    "128": "icons/jotchua-pixelart.png"
+},
+"action":{
+"default_popup": "index.html"
+}
+
+}
